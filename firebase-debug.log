@@ -1,0 +1,40 @@
+[debug] [2020-12-22T16:36:50.561Z] ----------------------------------------------------------------------
+[debug] [2020-12-22T16:36:50.564Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Jyotishman Parasar\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2020-12-22T16:36:50.565Z] CLI Version:   9.1.0
+[debug] [2020-12-22T16:36:50.565Z] Platform:      win32
+[debug] [2020-12-22T16:36:50.565Z] Node Version:  v13.10.1
+[debug] [2020-12-22T16:36:50.567Z] Time:          Tue Dec 22 2020 22:06:50 GMT+0530 (India Standard Time)
+[debug] [2020-12-22T16:36:50.567Z] ----------------------------------------------------------------------
+[debug] [2020-12-22T16:36:50.567Z] 
+[debug] [2020-12-22T16:36:50.577Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-12-22T16:36:50.578Z] > authorizing via signed-in user
+[debug] [2020-12-22T16:36:50.578Z] [iam] checking project staging for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2020-12-22T16:36:50.582Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/staging:testIamPermissions  
+ {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2020-12-22T16:36:52.343Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 22 Dec 2020 16:36:50 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=1309","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-12-22T16:36:52.345Z] [iam] error while checking permissions, command may fail: FirebaseError: Authorization failed. This account is missing the following required permissions on project staging:
+
+  firebase.projects.get
+  firebasehosting.sites.update
+[debug] [2020-12-22T16:36:52.346Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/staging  
+ 
+[debug] [2020-12-22T16:36:52.906Z] <<< HTTP RESPONSE 403 {"vary":"X-Origin, Referer, Origin,Accept-Encoding","content-type":"application/json; charset=UTF-8","date":"Tue, 22 Dec 2020 16:36:51 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-12-22T16:36:52.906Z] <<< HTTP RESPONSE BODY {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2020-12-22T16:36:52.907Z] HTTP Error: 403, The caller does not have permission
+[debug] [2020-12-22T16:36:53.211Z] FirebaseError: HTTP Error: 403, The caller does not have permission
+    at module.exports (C:\Users\Jyotishman Parasar\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:38:12)
+    at Request._callback (C:\Users\Jyotishman Parasar\AppData\Roaming\npm\node_modules\firebase-tools\lib\api.js:41:35)
+    at Request.self.callback (C:\Users\Jyotishman Parasar\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\request\request.js:185:22)
+    at Request.emit (events.js:316:20)
+    at Request.EventEmitter.emit (domain.js:485:12)
+    at Request.<anonymous> (C:\Users\Jyotishman Parasar\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\request\request.js:1154:10)
+    at Request.emit (events.js:316:20)
+    at Request.EventEmitter.emit (domain.js:485:12)
+    at IncomingMessage.<anonymous> (C:\Users\Jyotishman Parasar\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\request\request.js:1076:12)
+    at Object.onceWrapper (events.js:422:28)
+    at IncomingMessage.emit (events.js:328:22)
+    at IncomingMessage.EventEmitter.emit (domain.js:485:12)
+    at endReadableNT (_stream_readable.js:1201:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[error] 
+[error] Error: Failed to get Firebase project staging. Please make sure the project exists and your account has permission to access it.
